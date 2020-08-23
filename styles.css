@@ -30,8 +30,6 @@
 
 
 
-
-
 #main-container {
     width: 60%;
     margin-left: auto;
@@ -40,10 +38,19 @@
 
 #intro {
     margin-top: 15%;
-    text-align: center;
-    width: 70%;
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#intro-content {
+    float: left;
+    width: 60%;
 }
 
 #name {
@@ -64,7 +71,21 @@
     font-size: 4vw;
 }
 
+#portrait {
+    width: 35%;
+    height: 40vh;
+    background-image: url(orangeBack-04.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    float: right;
+}
+
+#mobile-portrait {
+    display: none;
+}
+
 #skills {
+    float: left;
     margin-top: 10%;
     text-align: center;
 }
@@ -169,8 +190,8 @@
     outline: none;
 }
 
-.button:focus{
-    outline:none;
+.button:focus {
+    outline: none;
 }
 
 .button:hover {
@@ -219,11 +240,11 @@
     margin-bottom: 10%;
 }
 
-#github-tag{
+#github-tag {
     font-family: "DIN-Medium";
 }
 
-.profile-card-5-body{
+.profile-card-5-body {
     padding: 20px !important;
     text-align: left;
 }
@@ -269,9 +290,7 @@
     font-weight: 300;
 }
 
-.profile-card-5 .btn-primary {
-
-}
+.profile-card-5 .btn-primary {}
 
 .project-button {
     border-radius: 50%;
@@ -286,8 +305,8 @@
     outline: none;
 }
 
-.project-button:focus{
-    outline:none;
+.project-button:focus {
+    outline: none;
 }
 
 .project-button:hover {
@@ -296,6 +315,313 @@
 
 }
 
+
 footer {
+    width: 100%;
+    float: right;
     font-family: "DIN";
+}
+
+@media screen and (max-width: 800px) {
+
+    #main-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #intro {
+        margin-top: 15%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #intro-content {
+        width: 100%;
+    }
+
+    #name {
+        line-height: 30px;
+        letter-spacing: 0.05ch;
+        color: #C2C2C2;
+        font-family: "NoeDisplay-Medium";
+        font-size: 30px;
+        margin: 0;
+    }
+
+    #intro-desc {
+        line-height: 5vh;
+        letter-spacing: -0.05ch;
+        margin: 0;
+        margin-bottom: 20px;
+        font-family: "DIN-Bold";
+        font-size: 10vw;
+    }
+
+    #mobile-portrait {
+        display: block;
+        width: 45%;
+        height: 25vh;
+        background-image: url(orangeBack-04.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #portrait {
+        display: none;
+        width: 35%;
+        height: 40vh;
+        background-image: url(orangeBack-04.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        z-index: -99;
+    }
+
+    #skills {
+        float: left;
+        margin-top: 20%;
+        text-align: center;
+    }
+
+    #title {
+        letter-spacing: 0.05ch;
+        color: #C2C2C2;
+        font-family: "NoeDisplay-Medium";
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    #intro .iconify {
+        font-size: 30px;
+        margin-right: 5px;
+        transition: all .4s ease-in-out;
+        color: #C2C2C2;
+    }
+
+
+    #intro .iconify:hover {
+        transform: scale(1.5);
+    }
+
+    #facebook:hover {
+        color: #3F51B5;
+    }
+
+    #linked-in:hover {
+        color: #009BD8;
+    }
+
+    #github:hover {
+        color: #808080;
+    }
+
+    #email:hover {
+        color: #DC6058;
+    }
+
+    #resume:hover {
+        color: #d724dd;
+    }
+
+    #medium:hover {
+        color: #00B973;
+    }
+
+    #skills-container {
+        text-align: left;
+        margin-bottom: 10%;
+    }
+
+
+    .col-sm {
+        padding: 0px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .card-body {
+        color: white;
+        border-radius: 7px;
+    }
+
+    .card-title {
+        font-family: "DIN-Bold";
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
+
+    .card-body {
+        letter-spacing: -0.05ch;
+        font-family: "DIN";
+        font-size: 1.2em;
+    }
+
+    .card-link {
+        border-radius: 100px;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        opacity: 0.5;
+    }
+
+    .button {
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.09);
+        color: white;
+        text-align: center;
+        text-align: center;
+        line-height: 16px;
+        font-size: 16px;
+        margin: 4px 2px;
+        height: 50px;
+        width: 50px;
+        outline: none;
+    }
+
+    .button:focus {
+        outline: none;
+    }
+
+    .button:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.5);
+
+    }
+
+    #link {
+        padding: 0;
+        color: white;
+    }
+
+    #git-button {
+        padding: 0;
+        color: white;
+        font-size: 20px;
+    }
+
+    .orange {
+        background-color: #FF6E43;
+    }
+
+    .dark-orange {
+        background-color: #FF4A50;
+    }
+
+    .red {
+        background-color: #E3325F;
+    }
+
+    .purple {
+        background-color: #9608A3;
+    }
+
+    .magenta {
+        background-color: #A30878;
+    }
+
+    .violet {
+        background-color: #7F31C3;
+    }
+
+    #projects-container {
+        text-align: center;
+        margin-bottom: 10%;
+    }
+
+    #github-tag {
+        font-family: "DIN-Medium";
+    }
+
+    .profile-card-5-body {
+        padding: 20px !important;
+        text-align: left;
+    }
+
+    /*Profile Card 5*/
+    .profile-card-5 {
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        box-shadow: 0 27px 45px -17px rgba(191, 191, 191, 0.50);
+    }
+
+    .profile-card-5 .btn {
+        border-radius: 2px;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 7px 20px;
+    }
+
+    .profile-card-5 .card-img-block {
+        width: 91%;
+        margin: 0 auto;
+        position: relative;
+        top: -20px;
+
+    }
+
+    .profile-card-5 .card-img-block img {
+        border-radius: 5px;
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.63); */
+    }
+
+    .profile-card-5 h5 {
+        text-align: left;
+        color: black;
+        font-size: 25px;
+    }
+
+    .profile-card-5 p {
+        text-align: left;
+        color: black;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .profile-card-5 .btn-primary {}
+
+    .project-button {
+        border-radius: 50%;
+        border: none;
+        color: white;
+        text-align: center;
+        line-height: 16px;
+        font-size: 16px;
+        margin: 4px 2px;
+        height: 50px;
+        width: 50px;
+        outline: none;
+    }
+
+    .project-button:focus {
+        outline: none;
+    }
+
+    .project-button:hover {
+        cursor: pointer;
+        opacity: 0.8;
+
+    }
+
+
+    footer {
+        width: 100%;
+        float: right;
+        font-family: "DIN";
+    }
+
+
 }
